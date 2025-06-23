@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pesan Banner & Poster Outdoor</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .wrapper { padding: 16px; }
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,.08);
+      max-width: 480px;
+      margin: auto;
+    }
+    h2 { text-align: center; margin-bottom: 10px; }
+    .deskripsi {
+      font-size: 14px; color: #555;
+      margin-bottom: 20px; text-align: justify;
+    }
+    label { display: block; margin-top: 15px; font-weight: bold; }
+    input[type="text"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="time"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      background: #fff;
+      font-family: Arial, sans-serif;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+    .checkbox-group {
+      margin-top: 6px;
+      padding: 6px 0;
+    }
+    .checkbox-group label {
+      display: flex; align-items: center;
+      font-weight: normal; margin-top: 4px;
+    }
+    .checkbox-group input { margin-right: 8px; }
+    .hint { font-size: 12px; color: #888; margin-top: 4px; }
+    button {
+      width: 100%; margin-top: 20px; padding: 14px;
+      background: #25d366; color: #fff; border: none;
+      border-radius: 8px; font-size: 16px; cursor: pointer;
+    }
+    button:hover { background: #1ebe5d; }
+    .note {
+      margin-top: 20px; font-size: 14px; color: #d35400;
+      background: #fff6e5; padding: 12px; border-radius: 8px;
+    }
+    .note b { display: block; font-size: 16px; color: #c0392b; margin-bottom: 6px; }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <form onsubmit="sendToWhatsApp();return false;">
+      <h2>Pesan "Banner & Poster Outdoor"</h2>
+
+      <div class="deskripsi">
+        Outdoor banner adalah media promosi berukuran besar dari bahan vinil yang dipasang di luar ruangan untuk menarik perhatian banyak orang. Fungsinya sangat penting sebagai alat komunikasi visual yang efektif, karena mudah terlihat, tahan cuaca, dan mampu menjangkau audiens secara luas.
+      </div>
+
+      <label>Nama Anda</label>
+      <input type="text" id="nama" required />
+
+      <label>Nomor WhatsApp Anda</label>
+      <input type="tel" id="nowa" pattern="[0-9]+" required />
+
+      <label>Orientasi Cetakan</label>
+      <select id="orientasi" required>
+        <option value="" disabled selected>Pilih Orientasi</option>
+        <option value="Potrait (Berdiri)">Potrait (Berdiri)</option>
+        <option value="Landscape (Tidur)">Landscape (Tidur)</option>
+      </select>
+
+      <label>Dengan Bahan</label>
+      <select id="bahan" required>
+        <option value="" disabled selected>Pilih Bahan</option>
+        <option value="Flexi China (Tipis)">Flexi China (Tipis)</option>
+        <option value="Flexi Korea Glossy (Tebal)">Flexi Korea Glossy (Tebal)</option>
+        <option value="Flexi Korea Matte (Tebal)">Flexi Korea Matte (Tebal)</option>
+        <option value="Albatross">Albatross</option>
+        <option value="Luster">Luster</option>
+        <option value="Kain">Kain</option>
+        <option value="Cloth">Cloth</option>
+        <option value="Duratrans (Untuk Neonbox)">Duratrans (Untuk Neonbox)</option>
+      </select>
+
+      <label>Panjang (cm)</label>
+      <input type="number" id="panjang" min="1" required />
+
+      <label>Lebar (cm)</label>
+      <input type="number" id="lebar" min="1" required />
+
+   <label for="metode">Metode Cetak Dengan Mesin Tinta</label>
+    <select id="metode" required>
+      <option value="" disabled selected>Pilih metode cetak</option>
+      <option value="UV Print (Super High Resolution)">UV Print (Super High Resolution)</option>
+      <option value="Eco-Solvent (High Resolution)">Eco-Solvent (High Resolution)</option>
+    </select>
+
+      <label>Finishing</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" value="Potong" />Potong</label>
+        <label><input type="checkbox" value="Mata Ayam" />Mata Ayam</label>
+        <label><input type="checkbox" value="Selobokan" />Selobokan</label>
+      </div>
+
+      <label>Jumlah</label>
+      <input type="number" id="jumlah" min="1" required />
+
+      <label>Kapan Dibutuhkan?</label>
+      <input type="date" id="tanggal" required />
+
+      <label>Pada Jam Berapa?</label>
+      <input type="time" id="jam" required />
+
+      <label>Catatan Khusus untuk Admin Kami</label>
+      <textarea id="catatan" placeholder="Contoh: Kasih mata ayam ( lubang ) pojok-pojok, file saya kirim via email, dll."></textarea>
+
+<div class="note">
+        <b>Penting !</b>
+        Estimasi Dateline Yang Anda Atur Bisa Berubah Sesuai Kondisi Antrian, Anda Bisa Atur Negosiasi Waktu Dateline Dengan Admin Kami. <b>"Pastikan File Anda Ready / Siap Print"</b>
+      </div>
+
+      <button type="submit">Cek Harga ke Admin Metropolis Print</button>
+      
+    </form>
+  </div>
+
+  <script>
+    function formatTanggalIndo(tgl) {
+      const bulan = ["Januari","Februari","Maret","April","Mei","Juni",
+                     "Juli","Agustus","September","Oktober","November","Desember"];
+      const hari = ["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
+      const d = new Date(tgl);
+      return `${hari[d.getDay()]}, ${d.getDate()} ${bulan[d.getMonth()]} ${d.getFullYear()}`;
+    }
+
+    function sendToWhatsApp() {
+      const nama = document.getElementById('nama').value;
+      const nowa = document.getElementById('nowa').value;
+      const orientasi = document.getElementById('orientasi').value;
+      const bahan = document.getElementById('bahan').value;
+      const panjang = document.getElementById('panjang').value;
+      const lebar = document.getElementById('lebar').value;
+      const jumlah = document.getElementById('jumlah').value;
+      const tanggal = formatTanggalIndo(document.getElementById('tanggal').value);
+      const jam = document.getElementById('jam').value;
+      const catatan = document.getElementById('catatan').value || "-";
+
+      const finishArr = Array.from(
+        document.querySelectorAll('.checkbox-group input:checked')
+      ).map(el => el.value);
+      const finishing = finishArr.length ? finishArr.join(', ') : "Tidak ada";
+
+      const adminWa = "6281216370657";
+      const pesan =
+        `📌 Pemesanan Banner & Poster Outdoor\n\n` +
+        `👤 Nama: ${nama}\n` +
+        `📱 No. WA: ${nowa}\n` +
+        `📐 Orientasi: ${orientasi}\n` +
+        `🧾 Bahan: ${bahan}\n` +
+        `📏 Ukuran: ${panjang} cm x ${lebar} cm\n` +
+        `🔧 Finishing: ${finishing}\n` +
+        `🔢 Jumlah: ${jumlah} pcs\n` +
+        `🗓️ Hari Dateline: ${tanggal}\n` +
+        `⏰ Jam Dateline: ${jam}\n` +
+        `📝 Catatan: ${catatan}`;
+
+      window.open(`https://wa.me/${adminWa}?text=${encodeURIComponent(pesan)}`, "_blank");
+    }
+  </script>
+</body>
+</html>
